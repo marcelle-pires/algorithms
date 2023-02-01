@@ -1,19 +1,22 @@
-import fire
+# Binary search algorithms
+# Input: a list of values and one value to be searched
+# Output: Return the index of searched value or 
+# None if the number is not listed 
 
-def binary_search(list, valor: int):
+def binary_search(list, value: int):
     
-    ini = 0
-    fim = len(list) - 1
+    start = 0
+    end = len(list) - 1
 
-    while (ini <= fim):
-        meio = (ini+fim) // 2
-        chute = list[meio]
+    while (start <= end):
+        middle = (start+end) // 2
+        tryValue = list[middle]
 
-        if chute == valor:
-            return meio
-        elif chute > valor:
-            fim = meio - 1
+        if tryValue == value:
+            return middle
+        elif tryValue > value:
+            end = middle - 1
         else:
-            ini = meio + 1
+            start = middle + 1
     
     return None
