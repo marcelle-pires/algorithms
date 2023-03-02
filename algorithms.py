@@ -2,6 +2,7 @@ import logging
 import fire
 from src.binary_search import binary_search
 from src.selection_sort import selection_sort
+from src.factorial import factorial
 
 logging.basicConfig(format='[%(levelname)s] %(message)s', level=logging.INFO)
 
@@ -15,6 +16,10 @@ def binary_search_algorithm(list, valor):
 def selection_sort_algorithm(list):
   result = selection_sort(list)
   logging.info("sorted list: " + str(result))
+
+def factorial_algorithm(num):
+  result = factorial(num)
+  logging.info("Factorial result: " + str(result))
 
 if __name__ == '__main__':
   fire.Fire()
